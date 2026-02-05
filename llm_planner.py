@@ -64,7 +64,8 @@ Rules:
 - Only use columns that exist in the available_columns list
 - If the question cannot be answered from the CSV files, return null
 
-Respond ONLY with valid JSON, no other text."""
+Respond ONLY with valid JSON, no other text.
+"""
 
         user_prompt = f"User question: {question}\n\nGenerate the JSON query plan:"
 

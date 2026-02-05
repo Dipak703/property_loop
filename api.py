@@ -50,7 +50,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Fund Analytics Chatbot API",
     description="LLM-assisted chatbot for analyzing fund data from CSV files",
-    version="1.0.0",
+    version="1.2.0",
     lifespan=lifespan
 )
 
@@ -156,8 +156,8 @@ if __name__ == "__main__":
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             return s.connect_ex(('localhost', port)) == 0
     
-    # Use port from environment or default to 7000
-    port = int(os.getenv("PORT", 7000))
+    # Use port from environment or default to 7001
+    port = int(os.getenv("PORT", 7001))
     if is_port_in_use(port):
         print(f"⚠️  Port {port} is already in use!")
         print("Either stop the existing process or use a different port.")
